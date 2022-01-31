@@ -227,21 +227,7 @@ jobs:
           #notification-color: dc3545
   
         ######## Deployment - Dev Environment ########
-  Deploy-Dev:
-    environment: 'Development'
-    runs-on: ubuntu-latest
-    needs: Code-Quality-Check
-    steps:
-    - name: Deploy dev
-      run: echo ${{ job.status }}
-      
-  Functional-Test-Regression:
-    runs-on: ubuntu-latest
-    needs: Deploy-Dev
-    steps:
-    - name: Regression
-      run: echo ${{ job.status }}
-      
+  
   Functional-Test-Progression:
     runs-on: ubuntu-latest
     needs: Deploy-Dev
