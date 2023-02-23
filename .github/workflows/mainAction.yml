@@ -68,7 +68,7 @@ jobs:
         run: ls -ltrR
 
   Job2:
-    uses: nihar30/simple-java-maven-app/.github/workflows/checkmarx-analysis.yml
+    uses: nihar30/simple-java-maven-app/.github/workflows/checkmarx-analysis.yml@master
     needs: Jab1
     with: 
       proj_name: 'GithubActionTest'
