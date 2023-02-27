@@ -20,6 +20,7 @@ runs:
 
     - name: call sh
       shell: bash
+      working-directory: ${{ github.action_path }}
       run: |
         ls
         chmod 744 test.sh
