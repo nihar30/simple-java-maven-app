@@ -61,7 +61,7 @@ jobs:
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v2.2.3
         with:
-            name: Jars_"${{ env.STACK }}"
+            name: Jars
             path: /home/runner/work/java-junit-template-project/java-junit-template-project/lib/org.jacoco.ant-0.8.7.jar!/org/jacoco/ant/antlib.xml
         
       - name: files
