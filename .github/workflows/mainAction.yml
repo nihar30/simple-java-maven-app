@@ -67,6 +67,13 @@ jobs:
       - name: files
         run: ls -ltrR
 
+      - name: action is being called here
+        uses: nihar30/simple-java-maven-app/.github/actions/print_env_var@master
+        with:
+          STACK: ${{ env.STACK }}
+          BUILD_TECH: ${{ env.BUILD_TECH }}
+
+
   Job2:
     uses: nihar30/simple-java-maven-app/.github/workflows/checkmarx-analysis.yml@master
     needs: Jab1

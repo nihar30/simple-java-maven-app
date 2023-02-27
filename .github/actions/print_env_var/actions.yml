@@ -1,0 +1,26 @@
+name: print_env_var
+decription: printing the environment variables
+inputs:
+    STACK: 
+      description: "technology stack"
+      required: true
+      default: "java"
+    BUILD_TECH: 
+      description: "build tech"
+      required: false
+      default: "java_ant"
+
+runs:
+  using: "composit"
+  steps:
+    - name: print 
+      run: |
+          echo ${{ inputs.STACK }}
+
+    - name: call sh
+      shell: bash
+      run: |
+        ls
+        chmod 744 test.sh
+        bash test.sh ${{ inputs.STACK }} ${{ inputs.BUILD_TECH }}
+        
