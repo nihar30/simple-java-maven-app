@@ -11,7 +11,7 @@ inputs:
       default: "java_ant"
 
 runs:
-  using: "composit"
+  using: "composite"
   steps:
     - name: print 
       shell: bash
