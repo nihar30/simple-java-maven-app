@@ -23,15 +23,15 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
     # Runs the Checkmarx Scan leveraging the latest version of CxFlow - REFER to Action README for list of inputs
-    - name: Checkmarx CxFlow Action
-      uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.0
-      with:
-        project: ${{ inputs.proj_name }}
-        team: ${{ inputs.teams_path}}
-        checkmarx_url: ${{ secrets.CHECKMARX_URL }}
-        checkmarx_username: ${{ secrets.CHECKMARX_USERNAME }}
-        checkmarx_password: ${{ secrets.CHECKMARX_PASSWORD }}
-        checkmarx_client_secret: ${{ secrets.CHECKMARX_CLIENT_SECRET }}
+    # - name: Checkmarx CxFlow Action
+    #   uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.0
+    #   with:
+    #     project: ${{ inputs.proj_name }}
+    #     team: ${{ inputs.teams_path}}
+    #     checkmarx_url: ${{ secrets.CHECKMARX_URL }}
+    #     checkmarx_username: ${{ secrets.CHECKMARX_USERNAME }}
+    #     checkmarx_password: ${{ secrets.CHECKMARX_PASSWORD }}
+    #     checkmarx_client_secret: ${{ secrets.CHECKMARX_CLIENT_SECRET }}
         
     # Upload the Report for CodeQL/Security Alerts
     - name: Upload SARIF file
